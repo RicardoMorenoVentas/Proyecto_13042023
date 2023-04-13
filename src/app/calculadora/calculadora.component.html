@@ -1,7 +1,7 @@
 <h1>Calculadora</h1>
 <p>Introduzca el numero: <input type="number" [(ngModel)]="numero_primero"></p>
 <p>Introduzca el numero: <input type="number" [(ngModel)]="numero_segundo"></p>
-<h3>Resultado: <input type="number" [(ngModel)]="salida"></h3>
+<h3>Resultado: {{salida}}</h3>
 <button (click)="operador('+')">+</button>
 <button (click)="operador('-')">-</button>
 <button (click)="operador('*')">*</button>
