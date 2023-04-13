@@ -10,7 +10,7 @@ export class CalculadoraComponent {
     numero_segundo:number = 0;
     salida:number = 0;
 
-    operador(a: string) : void{
+    operador(a: string) : void {
       switch (a) {
         case "+":
           this.salida =  (this.numero_primero + this.numero_segundo)
