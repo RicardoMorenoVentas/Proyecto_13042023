@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ConversorComponent {
     moneda_origen:number = 0;
-    opcion_seleccionada:string = "";
+    opcion_seleccionada:string = "USD";
     moneda_resultado:number = 0;
 
     calcular(){
