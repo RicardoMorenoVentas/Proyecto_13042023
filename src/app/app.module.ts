@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { ConversorComponent } from './conversor/conversor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TwoWayBindingComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    ConversorComponent
   ],
   imports: [
     BrowserModule,
