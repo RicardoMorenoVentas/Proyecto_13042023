@@ -1,22 +1,20 @@
 <h1>Datos de compra</h1>
-<form [formGroup]="form">
-  <p>Correo electrónico: <input type="email" formControlName="email_intro"></p>
-  <p>Dirección: <textarea formControlName="direccion"></textarea></p>
-  <p>Teléfono: <input type="tel" formControlName="telefono_introducido"></p>
-  <p>Comunidad: <select formControlName="comunidad_seleccionada">
+  <p>Correo electrónico: <input type="email" [(ngModel)]="email_intro" pattern="[a-zA-Z0-9]+\.[a-zA-Z0-9]+@softtek\.com"></p>
+  <p>Dirección: <textarea [(ngModel)]="direccion"></textarea></p>
+  <p>Teléfono: <input type="tel" [(ngModel)]="telefono_introducido" pattern="[0-9]{9}"><br><small>Formato: 123456789</small></p>
+  <p>Comunidad: <select [(ngModel)]="comunidad_seleccionada">
       <option value="Madrid">Madrid</option>
       <option value="Valencia">Valencia</option>
       <option value="Barcelona">Barcelona</option>
   </select></p>
   <p>Forma de pago:
-    <input type="radio" formControlName="forma_pago" value="Efectivo">
+    <input type="radio" [(ngModel)]="forma_pago" value="Efectivo">
     <label for="Efectivo">Efectivo</label>
-    <input type="radio" formControlName="forma_pago" value="Tarjeta">
+    <input type="radio" [(ngModel)]="forma_pago" value="Tarjeta">
     <label for="Tarjeta">Tarjeta</label>
-    <input type="radio" formControlName="forma_pago" value="Contra-reembolso">
+    <input type="radio" [(ngModel)]="forma_pago" value="Contra-reembolso">
     <label for="Contra-reembolso">Contra-reembolso</label>
   </p>
   <p><input type="checkbox" (change)="changeBool()"  [checked]="aceptado"> Acepta recibir información de nuestros productos</p>
   <button type="submit" [disabled]="!aceptado">Enviar</button>
-</form>
-<pre>{{form.value | json}}</pre>
+<pre>Correo: {{email_intro}}, Dirección: {{direccion}}, Comunidad: {{comunidad_seleccionada}}, Forma de pago: {{forma_pago}}, Teléfono: {{telefono_introducido}}</pre>
